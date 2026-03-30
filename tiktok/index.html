@@ -153,11 +153,11 @@
     <div class="step-content">
       <h3>Select Video to Publish</h3>
       <p>Choose a branded AI/tech video (mp4 format, max 500MB). Videos are automatically branded with the OpenClaw Info overlay before publishing.</p>
-      <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+      <label class="upload-area" for="fileInput" style="cursor:pointer;display:block;">
         <input type="file" id="fileInput" accept="video/mp4,video/mov" style="display:none" onchange="handleFileSelect(this)">
         <p><strong>Click to select video</strong> or drag and drop here</p>
         <p style="margin-top:0.5rem; font-size:0.8rem;">MP4 or MOV · Max 500MB</p>
-      </div>
+      </label>
       <div class="status-bar" id="fileStatus">
         <span class="dot"></span> No file selected
       </div>
@@ -200,8 +200,10 @@
     if (input.files && input.files[0]) {
       const file = input.files[0];
       const sizeMB = (file.size / 1024 / 1024).toFixed(1);
+      // Prevent default browser video playback
+      input.value = input.value; // reset prevents autoplay
       document.getElementById('fileStatus').innerHTML =
-        '<span class="dot green"></span> ' + file.name + ' (' + sizeMB + ' MB) — Ready';
+        '<span class="dot green"></span> ' + file.name + ' (' + sizeMB + ' MB) — Ready to publish';
       fileSelected = true;
       checkReady();
     }
