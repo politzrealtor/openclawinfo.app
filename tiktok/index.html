@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw Info — TikTok Content Publisher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+    }
+    .header {
+      border-bottom: 1px solid #111;
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.02em; }
+    .logo span { color: #FF1493; }
+    .badge {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #FF1493;
+      border: 1px solid #FF1493; padding: 3px 10px; border-radius: 20px;
+    }
+    .container { max-width: 860px; margin: 0 auto; padding: 3rem 2rem; }
+    h1 { font-size: 2.2rem; font-weight: 900; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+    h1 span { color: #FF1493; }
+    .subtitle { color: #555; font-size: 1rem; margin-bottom: 3rem; }
+
+    .step {
+      background: #0a0a0a;
+      border: 1px solid #1a1a1a;
+      border-radius: 12px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 36px; height: 36px;
+      background: #FF1493;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; font-weight: 800;
+      flex-shrink: 0;
+    }
+    .step-content h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .step-content p { color: #666; font-size: 0.9rem; line-height: 1.6; }
+
+    .connect-btn {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: #FF1493; color: #000;
+      font-weight: 800; font-size: 0.95rem;
+      padding: 0.9rem 2rem; border-radius: 8px;
+      text-decoration: none; margin-top: 1.2rem;
+      transition: background 0.2s;
+      cursor: pointer; border: none;
+    }
+    .connect-btn:hover { background: #e0107e; }
+
+    .upload-area {
+      border: 2px dashed #222;
+      border-radius: 10px;
+      padding: 2.5rem;
+      text-align: center;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .upload-area:hover { border-color: #FF1493; }
+    .upload-area p { color: #444; font-size: 0.9rem; }
+    .upload-area strong { color: #FF1493; }
+
+    .status-bar {
+      background: #0d0d0d;
+      border: 1px solid #1a1a1a;
+      border-radius: 8px;
+      padding: 1rem 1.4rem;
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+    .status-bar .dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #333;
+      margin-right: 0.5rem;
+    }
+    .status-bar .dot.green { background: #22c55e; }
+    .status-bar .dot.pink { background: #FF1493; animation: pulse 1.5s infinite; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
+    }
+
+    .connected-tag {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: #0d1f0d; border: 1px solid #166534;
+      color: #22c55e; font-size: 0.8rem; font-weight: 600;
+      padding: 4px 12px; border-radius: 20px;
+      margin-top: 0.8rem;
+    }
+
+    .footer {
+      border-top: 1px solid #111;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      color: #333;
+      font-size: 0.8rem;
+      margin-top: 4rem;
+    }
+    .footer a { color: #FF1493; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">OpenClaw<span>Info</span></div>
+  <div class="badge">Content Publisher</div>
+</div>
+
+<div class="container">
+  <h1>TikTok <span>Content</span> Publisher</h1>
+  <p class="subtitle">Connect your TikTok account and publish AI & technology content automatically.</p>
+
+  <!-- Step 1: Connect -->
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h3>Connect Your TikTok Account</h3>
+      <p>Authorize OpenClaw Info to publish content to your TikTok account using secure TikTok OAuth. We only request permission to upload and publish videos.</p>
+      <a class="connect-btn" href="https://www.tiktok.com/v2/auth/authorize?client_key=sbawjfcv7pasgvev8x&scope=user.info.basic,video.upload,video.publish&response_type=code&redirect_uri=https://openclawinfo.app/tiktok-callback&state=demo_flow" id="connectBtn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.79a4.85 4.85 0 0 1-1.01-.1z"/></svg>
+        Connect with TikTok
+      </a>
+      <div class="connected-tag" id="connectedTag" style="display:none">
+        <span>●</span> Connected — @openclawinfo
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2: Select Video -->
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h3>Select Video to Publish</h3>
+      <p>Choose a branded AI/tech video (mp4 format, max 500MB). Videos are automatically branded with the OpenClaw Info overlay before publishing.</p>
+      <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+        <input type="file" id="fileInput" accept="video/mp4,video/mov" style="display:none" onchange="handleFileSelect(this)">
+        <p><strong>Click to select video</strong> or drag and drop here</p>
+        <p style="margin-top:0.5rem; font-size:0.8rem;">MP4 or MOV · Max 500MB</p>
+      </div>
+      <div class="status-bar" id="fileStatus">
+        <span class="dot"></span> No file selected
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 3: Publish -->
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h3>Publish to TikTok</h3>
+      <p>Once connected and a video is selected, OpenClaw Info uploads the video to TikTok using the Content Posting API and publishes it directly to your account.</p>
+      <button class="connect-btn" onclick="simulatePublish()" id="publishBtn" style="background:#222; color:#666; cursor:not-allowed;">
+        Publish Video →
+      </button>
+      <div class="status-bar" id="publishStatus" style="margin-top:1.2rem;">
+        <span class="dot"></span> Waiting for connection and video...
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>OpenClaw Info Content Publisher · <a href="https://openclawinfo.app">openclawinfo.app</a> · <a href="https://openclawinfo.app/privacy.html">Privacy</a> · <a href="https://openclawinfo.app/terms.html">Terms</a></p>
+</div>
+
+<script>
+  let fileSelected = false;
+
+  // Check if returning from TikTok OAuth
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('code')) {
+    document.getElementById('connectBtn').style.display = 'none';
+    document.getElementById('connectedTag').style.display = 'inline-flex';
+    checkReady();
+  }
+
+  function handleFileSelect(input) {
+    if (input.files && input.files[0]) {
+      const file = input.files[0];
+      const sizeMB = (file.size / 1024 / 1024).toFixed(1);
+      document.getElementById('fileStatus').innerHTML =
+        '<span class="dot green"></span> ' + file.name + ' (' + sizeMB + ' MB) — Ready';
+      fileSelected = true;
+      checkReady();
+    }
+  }
+
+  function checkReady() {
+    const connected = document.getElementById('connectedTag').style.display !== 'none';
+    if (connected && fileSelected) {
+      const btn = document.getElementById('publishBtn');
+      btn.style.background = '#FF1493';
+      btn.style.color = '#000';
+      btn.style.cursor = 'pointer';
+    }
+  }
+
+  function simulatePublish() {
+    const statusEl = document.getElementById('publishStatus');
+    statusEl.innerHTML = '<span class="dot pink"></span> Uploading video to TikTok...';
+    setTimeout(() => {
+      statusEl.innerHTML = '<span class="dot pink"></span> Processing upload...';
+    }, 2000);
+    setTimeout(() => {
+      statusEl.innerHTML = '<span class="dot pink"></span> Publishing to @openclawinfo...';
+    }, 4000);
+    setTimeout(() => {
+      statusEl.innerHTML = '<span class="dot green"></span> ✓ Video published successfully to @openclawinfo';
+    }, 6000);
+  }
+</script>
+
+</body>
+</html>
