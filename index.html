@@ -153,7 +153,14 @@
 
   function submitForm() {
     const email = document.getElementById('emailInput').value.trim();
-    if (!email || !email.includes('@')) {
+    // Strict email validation - must have text@text.tld format
+    const emailRegex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+    if (!email || !emailRegex.test(email)) {
+      const inp = document.getElementById('emailInput');
+      inp.focus();
+      inp.style.borderColor = '#E6007E';
+      inp.placeholder = 'Please enter a valid email (e.g. you@gmail.com)';
+      setTimeout(() => { inp.style.borderColor = ''; }, 3000);
       document.getElementById('emailInput').focus();
       return;
     }
