@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Free Download Is Ready | OpenClawInfo</title>
+  <title>Your Free Download Is Ready | RichOffBots.ai</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     body { background: #fff; color: #111; font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
     
     /* CONFIRMATION BANNER */
     .confirm-bar { background: #111; color: #fff; text-align: center; padding: 0.8rem 1rem; font-size: 0.9rem; font-weight: 600; }
-    .confirm-bar span { color: #E6007E; }
+    .confirm-bar span { color: #00D4AA; }
 
     .funnel-nav { padding: 1rem 2rem; border-bottom: 1px solid #eee; text-align: center; }
     .logo { font-size: 1.2rem; font-weight: 800; color: #111; }
-    .logo span { color: #E6007E; }
+    .logo span { color: #00D4AA; }
 
     /* DOWNLOAD SECTION */
     .download-section { text-align: center; padding: 3rem 1.5rem 2rem; max-width: 600px; margin: 0 auto; }
@@ -38,38 +38,38 @@
     /* UPSELL SECTION */
     .upsell { background: #0a0a0a; color: #fff; padding: 3rem 1.5rem; margin-top: 2rem; }
     .upsell-inner { max-width: 680px; margin: 0 auto; }
-    .upsell-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: #E6007E; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .upsell-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: #00D4AA; text-transform: uppercase; margin-bottom: 0.8rem; }
     .upsell h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -0.5px; }
-    .upsell h2 em { color: #E6007E; font-style: normal; }
+    .upsell h2 em { color: #00D4AA; font-style: normal; }
     .upsell-bridge { font-size: 1.05rem; color: #bbb; line-height: 1.7; margin-bottom: 2rem; }
     .upsell-bridge strong { color: #fff; }
 
     /* WHAT'S MISSING */
     .missing-list { list-style: none; padding: 0; margin-bottom: 2rem; }
     .missing-list li { padding: 0.9rem 0; border-bottom: 1px solid #1a1a1a; font-size: 0.95rem; color: #ccc; padding-left: 1.8rem; position: relative; }
-    .missing-list li::before { content: "→"; position: absolute; left: 0; color: #E6007E; font-weight: 800; }
+    .missing-list li::before { content: "→"; position: absolute; left: 0; color: #00D4AA; font-weight: 800; }
     .missing-list li strong { color: #fff; }
 
     /* SCARCITY BAR */
-    .scarcity-box { border: 1px solid #E6007E; border-radius: 8px; padding: 1rem 1.2rem; margin-bottom: 2rem; }
-    .scarcity-box .scarcity-label { font-size: 0.8rem; font-weight: 700; color: #E6007E; letter-spacing: 1px; margin-bottom: 0.5rem; }
+    .scarcity-box { border: 1px solid #00D4AA; border-radius: 8px; padding: 1rem 1.2rem; margin-bottom: 2rem; }
+    .scarcity-box .scarcity-label { font-size: 0.8rem; font-weight: 700; color: #00D4AA; letter-spacing: 1px; margin-bottom: 0.5rem; }
     .scarcity-bar-bg { background: #1a1a1a; border-radius: 100px; height: 10px; margin-bottom: 0.5rem; overflow: hidden; }
-    .scarcity-bar-fill { background: #E6007E; height: 100%; width: 82%; border-radius: 100px; }
+    .scarcity-bar-fill { background: linear-gradient(90deg, #FFD700, #00D4AA); height: 100%; width: 82%; border-radius: 100px; }
     .scarcity-text { font-size: 0.82rem; color: #888; }
     .scarcity-text strong { color: #fff; }
 
     /* PRICE + CTA */
     .price-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
     .price-strike { font-size: 1.4rem; color: #555; text-decoration: line-through; }
-    .price-now { font-size: 3rem; font-weight: 900; color: #E6007E; }
-    .price-tag { background: #E6007E; color: white; font-size: 0.75rem; font-weight: 800; padding: 0.3rem 0.7rem; border-radius: 4px; letter-spacing: 1px; }
+    .price-now { font-size: 3rem; font-weight: 900; color: #FFD700; }
+    .price-tag { background: linear-gradient(135deg, #FFD700, #00D4AA); color: #000; font-size: 0.75rem; font-weight: 800; padding: 0.3rem 0.7rem; border-radius: 4px; letter-spacing: 1px; }
     .upsell-cta {
-      display: block; width: 100%; padding: 1.2rem; background: #E6007E; color: white;
+      display: block; width: 100%; padding: 1.2rem; background: linear-gradient(135deg, #FFD700, #00D4AA); color: #000;
       font-size: 1.1rem; font-weight: 800; border: none; border-radius: 8px; cursor: pointer;
       text-align: center; text-decoration: none; letter-spacing: 0.5px; text-transform: uppercase;
-      transition: background 0.2s, transform 0.1s; box-sizing: border-box;
+      transition: transform 0.1s, box-shadow 0.2s; box-sizing: border-box;
     }
-    .upsell-cta:hover { background: #c0006a; transform: translateY(-1px); text-decoration: none; }
+    .upsell-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,212,170,0.3); text-decoration: none; }
     .upsell-sub { text-align: center; font-size: 0.8rem; color: #555; margin-top: 0.8rem; }
 
     /* TRUST BADGES */
@@ -77,7 +77,7 @@
     .trust-badge { font-size: 0.78rem; color: #666; display: flex; align-items: center; gap: 0.3rem; }
 
     /* TESTIMONIAL */
-    .upsell-quote { border-left: 3px solid #E6007E; padding-left: 1.2rem; margin: 2rem 0; }
+    .upsell-quote { border-left: 3px solid #00D4AA; padding-left: 1.2rem; margin: 2rem 0; }
     .upsell-quote p { font-size: 1rem; color: #ccc; font-style: italic; line-height: 1.6; margin-bottom: 0.5rem; }
     .upsell-quote cite { font-size: 0.85rem; color: #666; font-style: normal; }
 
@@ -90,14 +90,14 @@
 <div class="confirm-bar">✓ You're in. Check your inbox — your cheat sheet is on its way. <span>Scroll down for something important.</span></div>
 
 <nav style="width:100%;padding:1rem 2rem;border-bottom:1px solid #1a1a1a;background:#000;text-align:center;display:block;">
-  <img src="/brand/oci-circle-logo-official.png" alt="OpenClaw Info" style="height:52px;width:auto;display:inline-block;">
+  <img src="/brand/rob-logo-v3-black-800.png" alt="RichOffBots.ai" style="height:52px;width:auto;display:inline-block;">
 </nav>
 
 <!-- DOWNLOAD -->
 <div class="download-section">
   <div class="check-icon">✅</div>
   <h1 id="thankYouHeading">Your Cheat Sheet Is Ready.</h1>
-  <div style="background:#0a0a0a;border:1px solid #1a1a1a;border-left:4px solid #E6007E;border-radius:8px;padding:1.5rem 1.8rem;text-align:left;margin:0 auto 1.5rem;max-width:480px;">
+  <div style="background:#0a0a0a;border:1px solid #1a1a1a;border-left:4px solid #00D4AA;border-radius:8px;padding:1.5rem 1.8rem;text-align:left;margin:0 auto 1.5rem;max-width:480px;">
 </div>
 
 <!-- DIVIDER -->
@@ -111,23 +111,23 @@
 <div class="upsell">
   <div class="upsell-inner">
     <div class="upsell-label">⚡ Special One-Time Offer</div>
-    <h2>The Cheat Sheet Tells You <em>What</em> to Automate.<br>This Tells You <em>Exactly How.</em></h2>
+    <h2>The Cheat Sheet Tells You <em>What</em> to Automate.<br>This Tells You <em>Exactly How to Get Rich Off Bots.</em></h2>
 
     <p class="upsell-bridge">
-      You just unlocked the <strong>starter list</strong>. But most people stop there — they know what to automate, they just don't know how to actually build it.<br><br>
+      You just unlocked the <strong>starter list</strong>. But most people stop there — they know what to automate, they just don't know how to actually build bots that make money.<br><br>
       That's the gap. And that's exactly what this book closes.
     </p>
 
     <ul class="missing-list">
       <li>The cheat sheet gives you 5 ideas. <strong>The book gives you the complete system</strong> — 10 chapters, step-by-step, copy-paste ready.</li>
-      <li>How to build agents that <strong>run 24/7 without touching them</strong> — content, emails, lead follow-ups, all automated.</li>
-      <li>The exact <strong>AI team setup</strong> I use — a writer, a researcher, a scheduler, all working together.</li>
-      <li>How to go from <strong>your first agent → $5K/month → $20K/month</strong> — with a specific roadmap for each stage.</li>
-      <li>Real estate automation, social media on autopilot, and a system that <strong>works while you sleep.</strong></li>
+      <li>How to build bots that <strong>run 24/7 and generate passive income</strong> — content, emails, lead follow-ups, all automated.</li>
+      <li>The exact <strong>AI bot team setup</strong> I use — a writer, a researcher, a scheduler, all working together making money while I sleep.</li>
+      <li>How to go from <strong>your first bot → $5K/month → $20K/month</strong> — with a specific roadmap for each stage.</li>
+      <li>Real estate automation, social media on autopilot, and a system that <strong>prints money while you sleep.</strong></li>
     </ul>
 
     <div class="upsell-quote">
-      <p>"I've watched hundreds of YouTube videos about AI automation. This $9.99 PDF did more for me in one afternoon than all of them combined. I had my first agent running by chapter 3."</p>
+      <p>"I've watched hundreds of YouTube videos about AI automation. This $9.99 PDF did more for me in one afternoon than all of them combined. I had my first bot running and earning by chapter 3."</p>
       <cite>— Marcus T., Montreal</cite>
     </div>
 
@@ -145,7 +145,7 @@
       <span class="price-tag">TODAY ONLY</span>
     </div>
 
-    <a href="https://openclawinfo.gumroad.com/l/blueprint" class="upsell-cta">⬇ GET INSTANT ACCESS — $9.99</a>
+    <a href="https://richoffbots.gumroad.com/l/blueprint" class="upsell-cta">⬇ GET INSTANT ACCESS — $9.99</a>
     <p class="upsell-sub">Instant PDF download · Yours forever · Secure checkout via Gumroad</p>
 
     <div class="trust-badges">
@@ -161,7 +161,7 @@
 </div>
 
 <footer>
-  <p>© 2026 OpenClawInfo · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+  <p>© 2026 RichOffBots.ai · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
 </footer>
 
 <script>
