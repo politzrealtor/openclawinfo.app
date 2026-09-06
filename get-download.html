@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Free Download Is Ready | RichOffBots.ai</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { background:#fff; color:#111; font-family:-apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
+    .confirm-bar { background:#111; color:#fff; text-align:center; padding:0.8rem 1rem; font-size:0.9rem; font-weight:600; }
+    .confirm-bar span { color:#00D4AA; }
+
+    .download-section { text-align:center; padding:3rem 1.5rem 2rem; max-width:600px; margin:0 auto; }
+    .check-icon { font-size:3.5rem; margin-bottom:1rem; }
+    .download-section h1 { font-size:clamp(1.8rem,4vw,2.4rem); font-weight:900; margin-bottom:0.8rem; }
+    .download-section p.sub { font-size:1rem; color:#666; margin-bottom:2rem; }
+    .download-btn { display:inline-block; background:#111; color:#fff; padding:1rem 2.5rem; border-radius:8px; font-weight:800; font-size:1rem; text-decoration:none; letter-spacing:0.5px; transition:background 0.2s; }
+    .download-btn:hover { background:#333; text-decoration:none; }
+    .email-note { margin-top:1rem; font-size:0.82rem; color:#aaa; }
+
+    .upsell-divider { max-width:600px; margin:2rem auto 0; padding:0 1.5rem; text-align:center; }
+    .divider-line { display:flex; align-items:center; gap:1rem; }
+    .divider-line::before, .divider-line::after { content:''; flex:1; height:1px; background:#ddd; }
+    .divider-text { font-size:0.8rem; font-weight:700; color:#aaa; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; }
+
+    .upsell { background:#0a0a0a; color:#fff; padding:3rem 1.5rem; margin-top:2rem; }
+    .upsell-inner { max-width:680px; margin:0 auto; }
+    .upsell h2 { font-size:clamp(1.5rem,4vw,2rem); font-weight:900; margin-bottom:1rem; line-height:1.2; }
+    .upsell h2 em { color:#00D4AA; font-style:normal; }
+    .upsell p { color:#bbb; font-size:1rem; line-height:1.6; margin-bottom:1rem; }
+    .upsell-list { list-style:none; padding:0; margin:1.5rem 0; }
+    .upsell-list li { padding:0.6rem 0 0.6rem 1.6rem; position:relative; color:#ddd; font-size:0.95rem; }
+    .upsell-list li::before { content:"→"; position:absolute; left:0; color:#00D4AA; font-weight:800; }
+    .upsell-cta { display:inline-block; background:linear-gradient(135deg,#FFD700,#00D4AA); color:#000; padding:1.1rem 2.2rem; border-radius:8px; font-weight:900; font-size:1.05rem; text-decoration:none; letter-spacing:0.5px; }
+    .upsell-cta:hover { text-decoration:none; opacity:0.92; }
+    .upsell-note { font-size:0.8rem; color:#666; margin-top:0.9rem; }
+
+    footer { background:#0a0a0a; border-top:1px solid #111; padding:1.5rem; text-align:center; font-size:0.8rem; color:#444; }
+    footer a { color:#444; margin:0 0.5rem; }
+  </style>
+</head>
+<body>
+
+<div class="confirm-bar">✓ You're in. <span id="confirmTail">Your download is below.</span></div>
+
+<nav style="width:100%;padding:1rem 2rem;border-bottom:1px solid #1a1a1a;background:#000;text-align:center;display:block;">
+  <img src="/brand/rob-logo-v3-black-800.png" alt="RichOffBots.ai" style="height:52px;width:auto;display:inline-block;">
+</nav>
+
+<div class="download-section">
+  <div class="check-icon">✅</div>
+  <h1 id="thankYouHeading">Your Agent Work Pack Is Ready.</h1>
+  <p class="sub" id="thankYouSub">Tap the button and it downloads straight away. A copy is on its way to your inbox too.</p>
+  <a class="download-btn" id="downloadBtn" href="/downloads/agent-work-pack.pdf" download>⬇ Download the PDF</a>
+  <p class="email-note">If it does not open, check your downloads folder, then your spam folder for the email copy.</p>
+</div>
+
+<div class="upsell-divider">
+  <div class="divider-line">
+    <span class="divider-text">Before you go — one more thing</span>
+  </div>
+</div>
+
+<div class="upsell">
+  <div class="upsell-inner">
+    <h2>You have the prompts. <em>Now build the machine.</em></h2>
+    <p>The free pack gets an agent working on single tasks. The Blueprint is the whole system behind it, the one this account runs on every day.</p>
+    <ul class="upsell-list">
+      <li>The full automation stack, start to finish</li>
+      <li>How the pieces connect so it runs without you</li>
+      <li>The failure points that break most setups, and the fixes</li>
+    </ul>
+    <a class="upsell-cta" href="https://richoffbots.gumroad.com/l/blueprint">⬇ Get instant access — $9.99</a>
+    <p class="upsell-note">One payment. Instant download. No subscription.</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 RichOffBots.ai · <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms of Service</a></p>
+</footer>
+
+<script>
+  var MAGNETS = {
+    codex: {
+      name: 'Agent Work Pack',
+      file: '/downloads/agent-work-pack.pdf',
+      heading: 'Your Agent Work Pack Is Ready.'
+    },
+    agent: {
+      name: 'AI Agent Safety Checklist',
+      file: '/downloads/agent-safety-checklist.pdf',
+      heading: 'Your Safety Checklist Is Ready.'
+    }
+  };
+  var params = new URLSearchParams(window.location.search);
+  var key = (params.get('m') || 'codex').toLowerCase();
+  var M = MAGNETS[key] || MAGNETS.codex;
+  document.getElementById('thankYouHeading').textContent = M.heading;
+  var btn = document.getElementById('downloadBtn');
+  btn.setAttribute('href', M.file);
+  btn.textContent = '⬇ Download the PDF';
+</script>
+
+</body>
+</html>
